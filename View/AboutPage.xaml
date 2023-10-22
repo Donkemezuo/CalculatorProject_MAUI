@@ -3,10 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Calculator.AboutPage"
              Title="About">
-    <VerticalStackLayout>
+    <VerticalStackLayout Spacing="10" Padding="20">
+              <Border HeightRequest="160" 
+                    WidthRequest="160"
+                    StrokeShape="RoundRectangle 80,80,80,80"
+                    HorizontalOptions="Center"
+                    
+                    StrokeThickness="8"
+                    Margin="0,0,0,0">
+
+                <Image
+                    Aspect="AspectFit"
+                    Source="dotnet_bot.png"                  
+                    HeightRequest="160"
+                    WidthRequest="160"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center" />
+            </Border>
         <Label 
             Text="Raymond Donkemezuo!"
-            VerticalOptions="Center" 
+            TextColor="White"
+            FontSize="Title"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" />
+
+        <Label 
+            Text="Solo Developer👨🏿‍💻"
+            TextColor="White"
+            FontSize="Subtitle"
+            VerticalOptions="Center"
             HorizontalOptions="Center" />
     </VerticalStackLayout>
 </ContentPage>

@@ -4,11 +4,11 @@
        xmlns:local="clr-namespace:Calculator"
        x:Class="Calculator.AppShell">
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
-        <Tab Title="Basic Calculator">
+        <Tab Title="Basic">
             <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
         </Tab>
 
-        <Tab Title="Scientific Calculator">
+        <Tab Title="Scientific">
             <ShellContent ContentTemplate="{DataTemplate local:SecondPage}" />
         </Tab>
 
