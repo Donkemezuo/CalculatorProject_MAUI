@@ -88,7 +88,6 @@ public partial class MainPage : ContentPage
 
     void OnCalculate(object sender, EventArgs e)
     {
-        Debug.WriteLine(mathExpression);
         if (e == null)
         {
             if (secondNumber == 0)
@@ -110,7 +109,7 @@ public partial class MainPage : ContentPage
                 resultText.Text = result.ToString();
                 this.CurrentCalculation.Text = mathExpression;
                 currentEntry = "";
-            } catch (Exception){
+            } catch {
                 resultText.Text = "Invalid";
                 currentEntry = "";
                 this.CurrentCalculation.Text = mathExpression;
