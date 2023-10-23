@@ -76,6 +76,7 @@ public partial class SecondPage : ContentPage
         currentState = 1;
         decimalFormat = "N0";
         this.resultText.Text = "0";
+        this.CurrentCalculation.Text = "";
         currentEntry = string.Empty;
     }
 
@@ -85,11 +86,18 @@ public partial class SecondPage : ContentPage
         {
             if (secondNumber == 0)
                 LockNumberValue(resultText.Text);
+            double result;
+            if (mathOperator == "√")
+            {
+                result = Calculator.CalculateSquareRoot(secondNumber, mathOperator);
+                this.CurrentCalculation.Text = $"{mathOperator} {secondNumber}";
+            }
+            else
+            {
 
-            double result = Calculator.Calculate(firstNumber, secondNumber, mathOperator);
-
-            this.CurrentCalculation.Text = $"{firstNumber} {mathOperator} {secondNumber}";
-
+              result = Calculator.Calculate(firstNumber, secondNumber, mathOperator);
+              this.CurrentCalculation.Text = $"{firstNumber} {mathOperator} {secondNumber}";
+            }
             this.resultText.Text = result.ToTrimmedString(decimalFormat);
             firstNumber = result;
             secondNumber = 0;

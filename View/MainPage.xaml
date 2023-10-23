@@ -5,12 +5,12 @@
 
     <Grid Padding="16" RowSpacing="2" ColumnSpacing="2"
           RowDefinitions="2*,*,*,*,*,*"
-          ColumnDefinitions="*,*,*,*">
+          ColumnDefinitions="*,*,*,*, *">
 
         <Label x:Name="CurrentCalculation"
                FontSize="22"
                LineBreakMode="NoWrap"
-               Grid.ColumnSpan="4"
+               Grid.ColumnSpan="5"
                Text=""
                HorizontalTextAlignment="End"
                VerticalTextAlignment="Start"
@@ -20,11 +20,11 @@
                FontSize="64" FontAttributes="Bold" Text="0"
                HorizontalTextAlignment="End"
                VerticalTextAlignment="End"
-               LineBreakMode="NoWrap" Grid.ColumnSpan="4" />
+               LineBreakMode="NoWrap" Grid.ColumnSpan="5" />
 
         <BoxView BackgroundColor="{StaticResource LightGray}" HeightRequest="1"
                  Grid.Row="0" VerticalOptions="End"
-                 Grid.ColumnSpan="4"
+                 Grid.ColumnSpan="5"
                  />
 
         <Button Text="C" Grid.Row="1" Grid.Column="0"
@@ -71,6 +71,11 @@
         <Button Text="+" Grid.Row="4" Grid.Column="3"
                Clicked="OnSelectOperator" />
 
+        <Button Text="(" Grid.Row="1" Grid.Column="4"
+               Clicked="OnSelectOperator" />
+
+        <Button Text=")" Grid.Row="2" Grid.Column="4"
+               Clicked="OnSelectOperator" />
 
 
         <Button Text="=" Grid.Row="5" Grid.Column="3" 

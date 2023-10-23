@@ -1,4 +1,5 @@
-﻿namespace Calculator;
+﻿using System.Diagnostics;
+namespace Calculator;
 
 public partial class MainPage : ContentPage
 {
@@ -11,6 +12,7 @@ public partial class MainPage : ContentPage
     }
 
     string currentEntry = "";
+    string mathExpression = "";
     int currentState = 1;
     string mathOperator;
     double firstNumber, secondNumber;
@@ -25,6 +27,7 @@ public partial class MainPage : ContentPage
         string pressed = button.Text;
 
         currentEntry += pressed;
+        mathExpression += pressed;
 
         if ((this.resultText.Text == "0" && pressed == "0")
             || (currentEntry.Length <= 1 && pressed != "0")
@@ -50,6 +53,7 @@ public partial class MainPage : ContentPage
         currentState = -2;
         Button button = (Button)sender;
         string pressed = button.Text;
+        mathExpression += pressed;
         mathOperator = pressed;
     }
 
@@ -77,13 +81,15 @@ public partial class MainPage : ContentPage
         secondNumber = 0;
         currentState = 1;
         decimalFormat = "N0";
+        mathExpression = "";
         this.resultText.Text = "0";
         currentEntry = string.Empty;
     }
 
     void OnCalculate(object sender, EventArgs e)
     {
-        if (currentState == 2)
+        Debug.WriteLine(mathExpression);
+        if (e == null)
         {
             if (secondNumber == 0)
                 LockNumberValue(resultText.Text);
@@ -97,6 +103,19 @@ public partial class MainPage : ContentPage
             secondNumber = 0;
             currentState = -1;
             currentEntry = string.Empty;
+        }
+        else {
+            try {
+                double result = Calculator.EvaluateMathExpression(mathExpression);
+                resultText.Text = result.ToString();
+                this.CurrentCalculation.Text = mathExpression;
+                currentEntry = "";
+            } catch (Exception){
+                resultText.Text = "Invalid";
+                currentEntry = "";
+                this.CurrentCalculation.Text = mathExpression;
+                mathExpression = "";
+            }
         }
     }
 

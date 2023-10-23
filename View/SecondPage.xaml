@@ -32,7 +32,7 @@
         <Button Text="+/-" Grid.Row="1" Grid.Column="1"
                Clicked="OnNegative" />
         <Button Text="%" Grid.Row="1" Grid.Column="2"
-               Clicked="OnPercentage" />
+               Clicked="OnSelectOperator" />
 
         <Button Text="7" Grid.Row="2" Grid.Column="0"
                Clicked="OnSelectNumber" />

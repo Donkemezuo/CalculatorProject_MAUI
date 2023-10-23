@@ -1,4 +1,9 @@
-﻿namespace Calculator;
+﻿using System.Data;
+using System.Diagnostics;
+using System.Xml.XPath;
+using NCalc;
+
+namespace Calculator;
 
 public static class Calculator
 {
@@ -20,8 +25,28 @@ public static class Calculator
             case "-":
                 result = value1 - value2;
                 break;
+            case "%":
+                result = value1 % value2;
+                break;
+            case "^":
+                result = Math.Pow(value1, value2);
+                break;
         }
 
+        return result;
+    }
+
+    public static double CalculateSquareRoot(double value, string mathOperator) {
+        return Math.Sqrt(value);
+    }
+
+    public static double EvaluateMathExpression(string expression) {
+        expression = expression.Replace('–', '-').Replace('×', '*');
+        DataTable table = new DataTable();
+        table.Columns.Add("expression", typeof(string), expression);
+        DataRow row = table.NewRow();
+        table.Rows.Add(row);
+        double result = double.Parse((string)row["expression"]);
         return result;
     }
 }
