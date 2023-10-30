@@ -3,12 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Calculator.AboutPage"
              Title="About">
-    <VerticalStackLayout Spacing="10" Padding="20">
+    <VerticalStackLayout Spacing="10" Padding="20" BackgroundColor= "{DynamicResource BackgroundColor}">
               <Border HeightRequest="160" 
                     WidthRequest="160"
                     StrokeShape="RoundRectangle 80,80,80,80"
                     HorizontalOptions="Center"
-                    
                     StrokeThickness="8"
                     Margin="0,0,0,0">
 
@@ -22,14 +21,14 @@
             </Border>
         <Label 
             Text="Raymond Donkemezuo!"
-            TextColor="White"
             FontSize="Title"
             VerticalOptions="Center"
+            TextColor="{DynamicResource ButtonBGColor}"
             HorizontalOptions="Center" />
 
         <Label 
             Text="Solo Developer👨🏿‍💻"
-            TextColor="White"
+            TextColor="{DynamicResource ButtonBGColor}"
             FontSize="Subtitle"
             VerticalOptions="Center"
             HorizontalOptions="Center" />

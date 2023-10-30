@@ -5,9 +5,8 @@
              xmlns:local="clr-namespace:Calculator.Resources.Themes">
     <Application.Resources>
         <ResourceDictionary>
-            <!-- Merge the Dark Theme -->
             <ResourceDictionary.MergedDictionaries>
-                <local:DarkBGColorTheme /> <!-- Make sure 'local' is defined correctly -->
+                <local:DarkBGColorTheme />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

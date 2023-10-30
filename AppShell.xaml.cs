@@ -23,9 +23,8 @@ public partial class AppShell : Shell
             // Set the specified theme
             resourcesDictionary.Add(theme);
 
-            // You can also set other dynamic resources for this theme if needed
-            // For example, if you have a style for labels, you can set it like this:
-            // resourcesDictionary.Add(new Style { TargetType = typeof(Label), BasedOn = (Style)Application.Current.Resources["YourThemeStyle"] });
+            // Dismiss the flyout menu
+            Shell.Current.FlyoutIsPresented = false;
         }
     }
 

@@ -86,6 +86,10 @@ public partial class SecondPage : ContentPage
         mathExpression = "";
     }
 
+    void OnSelectSquare(object sender, EventArgs e) {
+
+    }
+
     void OnCalculate(object sender, EventArgs e)
     {
         if (e == null)
