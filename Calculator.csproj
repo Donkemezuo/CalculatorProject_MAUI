@@ -59,8 +59,10 @@
 
 	<ItemGroup>
 	  <None Remove="View\" />
+	  <None Remove="Resources\Themes\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="View\" />
+	  <Folder Include="Resources\Themes\" />
 	</ItemGroup>
 </Project>

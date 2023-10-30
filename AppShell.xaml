@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:local="clr-namespace:Calculator"
-       x:Class="Calculator.AppShell">
+       x:Class="Calculator.AppShell"
+       xmlns:local="clr-namespace:Calculator">
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
         <Tab Title="Basic">
             <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
@@ -16,4 +16,9 @@
             <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
         </Tab>
     </FlyoutItem>
+
+    <MenuItem Text="Dark Color Scheme" Clicked="DarkModeSelected"/>
+    <MenuItem Text="Light Color Scheme" Clicked="LightModeSelected"/>
+    <MenuItem Text="Pink Color Scheme" Clicked="PinkModeSelected"/>
+    <MenuItem Text="Red Color Scheme" Clicked="RedModeSelected"/>
 </Shell>
