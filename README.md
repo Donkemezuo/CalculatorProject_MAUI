@@ -20,6 +20,16 @@ Building out a simple calculator using Microsoft's .NET MAUI framework
 ![Screenshot_1698634670](https://github.com/Donkemezuo/CalculatorProject_MAUI/assets/43887215/a2114d0f-bf7a-4179-a025-5d50dbe75051)
 ![Screenshot_1698634682](https://github.com/Donkemezuo/CalculatorProject_MAUI/assets/43887215/c2a68d5a-7f4d-4968-bb46-89846e294e09)
 
+# Videos
+https://github.com/Donkemezuo/CalculatorProject_MAUI/assets/43887215/9a8bf71b-fe46-4b05-83d0-abeaf085883c
+
+https://github.com/Donkemezuo/CalculatorProject_MAUI/assets/43887215/e90efd7a-1529-4caf-8dee-dcae82603899
+
+https://github.com/Donkemezuo/CalculatorProject_MAUI/assets/43887215/9d7c1687-3705-400f-81e0-18353fc2895e
+
+
+
+
 
 
 
